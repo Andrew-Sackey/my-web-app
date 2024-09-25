@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  background-image: url(./images/bg-image1.png);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  /* background-color: rgb(156, 138, 138); */
+  width: 90vmin;
+  /* position: absolute; */
+  /* transform: translate(-50%, -50%); */
+  /* top: 50%;
+  left: 50%; */
+  padding: 80px 50px;
+  border-radius: 15px;
+  /* box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2); */
+  /* From https://css.glass */
+  background: rgba(223, 191, 191, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.2px);
+  -webkit-backdrop-filter: blur(1.2px);
+  border: 1px solid rgba(223, 191, 191, 0.27);
+  margin-left: 150px;
+}
+
+.search-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-box input {
+  padding: 5px;
+  width: 70%;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #d0552e;
+  font-size: 20px;
+}
+
+.search-box button {
+  padding: 5px;
+  width: 25%;
+  background-color: lightblue;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.result {
+  position: relative;
+}
+
+.result h3 {
+  font-size: 40px;
+  color: #ff993f;
+  font-weight: 500;
+}
+
+.word {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+
+.result button {
+  background-color: transparent;
+  color: #ff993f;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+
+.result .details {
+  display: flex;
+  gap: 10px;
+  color: navy;
+  margin: 5pxn0 20px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.word-meaning {
+  color: whitesmoke;
+  font-size: 18px;
+}
+
+.word-example {
+  color: whitesmoke;
+  font-style: italic;
+  border-left: 5px solid #eb812f;
+  padding-left: 20px;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 300;
+}
