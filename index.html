@@ -13,24 +13,24 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="./index.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <audio id="sound"></audio>
     <div class="container">
-      <div class="search-box">
-        <input type="text" placeholder="Type word here" class="input-word" />
-        <button class="search-btn">Search</button>
-      </div>
-      <div class="result">
+      <form class="search-box">
+        <input type="text" placeholder="Type word here" id="inp-word" />
+        <button type="submit" id="search-btn">Search</button>
+      </form>
+      <div class="result" id="result">
         <div class="word">
-          <h3>Sample</h3>
-          <button>
+          <h3 id="word">Sample</h3>
+          <button id="speakButton" class="audio-icon">
             <i class="fa-solid fa-volume-high"></i>
           </button>
         </div>
         <div class="details">
-          <p>pos</p>
-          <p>/sample/</p>
+          <p id="poS">pos</p>
+          <p id="phonetics">/sample/</p>
         </div>
         <p class="word-meaning">
           a white elephant dances with a bird on a tree
