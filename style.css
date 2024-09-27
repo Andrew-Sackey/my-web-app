@@ -25,13 +25,13 @@ body {
   border-radius: 15px;
   /* box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2); */
   /* From https://css.glass */
-background: rgba(245, 164, 164, 0.37);
-/* border-radius: 16px; */
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(8.6px);
--webkit-backdrop-filter: blur(8.6px);
-border: 1px solid rgba(245, 164, 164, 0.44);
-  
+  background: rgba(245, 164, 164, 0.37);
+  /* border-radius: 16px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.6px);
+  -webkit-backdrop-filter: blur(8.6px);
+  border: 1px solid rgba(245, 164, 164, 0.44);
+  margin-right: 55px;
 }
 
 .search-box {
@@ -68,7 +68,7 @@ border: 1px solid rgba(245, 164, 164, 0.44);
 }
 
 .result h3 {
-  font-size: 40px;
+  font-size: 50px;
   color: #ff993f;
   font-weight: 500;
 }
@@ -90,15 +90,15 @@ border: 1px solid rgba(245, 164, 164, 0.44);
 .result .details {
   display: flex;
   gap: 10px;
-  color: navy;
+  color: rgb(35, 35, 124);
   margin: 5pxn0 20px 0;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 400;
 }
 
 .word-meaning {
   color: whitesmoke;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .word-example {
@@ -112,6 +112,10 @@ border: 1px solid rgba(245, 164, 164, 0.44);
 }
 
 @media (max-width: 600px) {
+  .container {
+    width: 80%;
+    margin: auto;
+  }
   .search-box {
     flex-direction: column;
   }
@@ -125,6 +129,3 @@ border: 1px solid rgba(245, 164, 164, 0.44);
     text-align: center;
   }
 }
-
-
-

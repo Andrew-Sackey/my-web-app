@@ -7,8 +7,7 @@ const wordP = document.getElementById("word");
 const wordM = document.querySelector(".word-meaning");
 const wordPh = document.getElementById("phonetics");
 const wordPos = document.getElementById("poS");
-const wordA = document.querySelector("antonyms");
-
+const wordA = document.querySelector(".antonyms");
 
 const getDefinition = async (inputWord) => {
   try {
@@ -25,7 +24,14 @@ const getDefinition = async (inputWord) => {
     wordPh.innerText = definition[0].phonetics[1].text;
     wordPos.innerText = definition[0].meanings[0].partOfSpeech;
   } catch (error) {
-    console.log(error);
+    if (
+      error.message === "Cannot read properties of undefined (reading 'word')"
+    ) {
+      window.alert(
+        `The word "${inputWord}" could not be found in the dictionary`,
+      );
+    }
+    console.log(error.message);
   }
 };
 
@@ -49,4 +55,6 @@ document.getElementById("speakButton").addEventListener("click", () => {
   }
 });
 
-
+// .catch(error => {
+//   alert("sorry word not found");
+// });
