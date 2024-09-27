@@ -25,13 +25,13 @@ body {
   border-radius: 15px;
   /* box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2); */
   /* From https://css.glass */
-  background: rgba(223, 191, 191, 0.13);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.2px);
-  -webkit-backdrop-filter: blur(1.2px);
-  border: 1px solid rgba(223, 191, 191, 0.27);
-  /* margin-left: 50px; */
+background: rgba(245, 164, 164, 0.37);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.6px);
+-webkit-backdrop-filter: blur(8.6px);
+border: 1px solid rgba(245, 164, 164, 0.44);
+  
 }
 
 .search-box {
@@ -110,3 +110,21 @@ body {
   font-size: 18px;
   font-weight: 300;
 }
+
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  .definition {
+    text-align: center;
+  }
+}
+
+
+

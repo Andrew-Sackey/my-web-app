@@ -7,17 +7,8 @@ const wordP = document.getElementById("word");
 const wordM = document.querySelector(".word-meaning");
 const wordPh = document.getElementById("phonetics");
 const wordPos = document.getElementById("poS");
-const wordE = document.querySelector("word-example");
+const wordA = document.querySelector("antonyms");
 
-// btn.addEventListener("click", () => {
-//   let inpWord = document.getElementById("inp-word").value;
-//   fetch("${url}${inpWord}")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log(data);
-//     result.innerHTML =
-//   };
-// })
 
 const getDefinition = async (inputWord) => {
   try {
@@ -30,6 +21,7 @@ const getDefinition = async (inputWord) => {
     // empty word field
     wordP.innerText = definition[0].word;
     wordM.innerText = definition[0].meanings[0].definitions[0].definition;
+    wordM.innerText = definition[0].meanings[1].definitions[0].definition;
     wordPh.innerText = definition[0].phonetics[1].text;
     wordPos.innerText = definition[0].meanings[0].partOfSpeech;
   } catch (error) {
@@ -56,4 +48,5 @@ document.getElementById("speakButton").addEventListener("click", () => {
     alert("Please enter a word.");
   }
 });
+
 
